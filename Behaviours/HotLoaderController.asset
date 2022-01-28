@@ -1,0 +1,259 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8430318641543546546
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f479bb34c5f3014999e6bc299103fe9, type: 3}
+  m_Name: Open Elevator
+  m_EditorClassIdentifier: 
+  hasCustomName: 1
+  disableComments: 0
+  transitionMode: 0
+  id: 677218189
+  position:
+    serializedVersion: 2
+    x: 24916
+    y: 24822
+    width: 180
+    height: 32
+  color: 0
+  description: 
+  parent: {fileID: 11400000}
+  transitions: []
+  resetState: 0
+--- !u!114 &-7042234930878209566
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f479bb34c5f3014999e6bc299103fe9, type: 3}
+  m_Name: Unload Scene Async
+  m_EditorClassIdentifier: 
+  hasCustomName: 0
+  disableComments: 0
+  transitionMode: 0
+  id: 49771989
+  position:
+    serializedVersion: 2
+    x: 25137
+    y: 24817
+    width: 180
+    height: 32
+  color: 0
+  description: 
+  parent: {fileID: 11400000}
+  transitions:
+  - {fileID: -4096534050466769438}
+  resetState: 0
+--- !u!114 &-4096534050466769438
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c0f46054d6425e4fa696f5f3b6a359f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toNode: {fileID: -8430318641543546546}
+  fromNode: {fileID: -7042234930878209566}
+  useConditions: 0
+  isNegative: 0
+  mute: 0
+  id: 284644373
+--- !u!114 &-849985301371684877
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4473ce0dfc62c484288654a4fed2edb6, type: 3}
+  m_Name: On Next Scene Update
+  m_EditorClassIdentifier: 
+  hasCustomName: 1
+  disableComments: 0
+  transitionMode: 1
+  id: 881780793
+  position:
+    serializedVersion: 2
+    x: 25116
+    y: 24930
+    width: 230
+    height: 35
+  color: 2
+  description: 
+  parent: {fileID: 11400000}
+  transitions:
+  - {fileID: 5996860625261830986}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e638994223fb56748bcc4f7828e0ea28, type: 3}
+  m_Name: HotLoaderController
+  m_EditorClassIdentifier: 
+  hasCustomName: 0
+  disableComments: 0
+  transitionMode: 0
+  id: 1455602788
+  position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  color: 0
+  description: 
+  parent: {fileID: 0}
+  transitions: []
+  oldSource: {fileID: 0}
+  startNode: {fileID: 2267134101023294418}
+  upNode: {fileID: 0}
+  nodes:
+  - {fileID: 2267134101023294418}
+  - {fileID: -849985301371684877}
+  - {fileID: -7042234930878209566}
+  - {fileID: -8430318641543546546}
+  - {fileID: 6769365804733705351}
+  sourceReactions: {fileID: 4983014224204574181, guid: 34d104d9fa57d5040a33bd374b6c3ced,
+    type: 3}
+  blackboard:
+    list:
+    - name: current_scene
+      type: 1
+    - name: next_scene
+      type: 1
+    - name: pre_action
+      type: 9
+    - name: post_action
+      type: 9
+--- !u!114 &2267134101023294418
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f479bb34c5f3014999e6bc299103fe9, type: 3}
+  m_Name: Load Scene
+  m_EditorClassIdentifier: 
+  hasCustomName: 0
+  disableComments: 0
+  transitionMode: 0
+  id: 529884223
+  position:
+    serializedVersion: 2
+    x: 24909
+    y: 24932
+    width: 180
+    height: 32
+  color: 5
+  description: 
+  parent: {fileID: 11400000}
+  transitions:
+  - {fileID: 5953267356755841206}
+  resetState: 0
+--- !u!114 &5468928300258161842
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c0f46054d6425e4fa696f5f3b6a359f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toNode: {fileID: -7042234930878209566}
+  fromNode: {fileID: 6769365804733705351}
+  useConditions: 0
+  isNegative: 0
+  mute: 0
+  id: 1953155019
+--- !u!114 &5953267356755841206
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c0f46054d6425e4fa696f5f3b6a359f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toNode: {fileID: -8430318641543546546}
+  fromNode: {fileID: 2267134101023294418}
+  useConditions: 0
+  isNegative: 0
+  mute: 0
+  id: 1508399545
+--- !u!114 &5996860625261830986
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c0f46054d6425e4fa696f5f3b6a359f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toNode: {fileID: 6769365804733705351}
+  fromNode: {fileID: -849985301371684877}
+  useConditions: 0
+  isNegative: 0
+  mute: 0
+  id: 1704239496
+--- !u!114 &6769365804733705351
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f479bb34c5f3014999e6bc299103fe9, type: 3}
+  m_Name: Close Elevator
+  m_EditorClassIdentifier: 
+  hasCustomName: 1
+  disableComments: 0
+  transitionMode: 0
+  id: 1396983724
+  position:
+    serializedVersion: 2
+    x: 25138
+    y: 24874
+    width: 180
+    height: 32
+  color: 0
+  description: 
+  parent: {fileID: 11400000}
+  transitions:
+  - {fileID: 5468928300258161842}
+  resetState: 0

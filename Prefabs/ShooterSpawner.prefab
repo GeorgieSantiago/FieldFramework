@@ -1,0 +1,110 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &917521759892852668
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 917521759892852671}
+  - component: {fileID: 917521759892852670}
+  - component: {fileID: 917521759892852657}
+  m_Layer: 0
+  m_Name: ShooterSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &917521759892852671
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 917521759892852668}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6, y: -4, z: 15}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &917521759892852670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 917521759892852668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 297ab8e6dc0804a6693d123c63a58752, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetGameObject:
+    target: 0
+    gameObject: {fileID: 0}
+    global:
+      allowTypesMask: 512
+      name: 
+    local:
+      allowTypesMask: 512
+      name: 
+      targetType: 2
+      targetObject: {fileID: 0}
+    list:
+      targetType: 3
+      targetObject: {fileID: 0}
+      select: 1
+      index: 0
+    eventChangeVariable:
+      m_PersistentCalls:
+        m_Calls: []
+  isSnapToGroundEnabled: 1
+  spawnPattern:
+    patternType: 1
+    poissonDiskSamplingMinimumSpacing: 1
+    poissonDiskSamplingRadius: 5
+    isPoissonDiskSamplingStaticForEverySpawn: 0
+    spawnPoints: []
+    spiralSpacingOffset: 5
+    isRandomPositionStaticForEverySpawn: 0
+    randomSeed: 1
+    maxRandomPositionOffset: {x: 10, y: 0, z: 10}
+    minRandomPositionOffset: {x: -10, y: 0, z: -10}
+  isSpawnPeriodicallyEnabled: 0
+  periodicSpawnInSeconds: 1
+  periodicSkipChance: 0
+  periodicSpawnAfterSkipInSeconds: 1
+  isRespawningEnabled: 1
+  isRespawnCooldownEnabled: 1
+  respawnCooldownInSeconds: 10
+  isDespawnByDistanceEnabled: 0
+  isDespawnDistanceAutoCalculated: 0
+  despawnDistanceFromClosestSpawnable: 0
+  spawnables:
+  - gameObject: {fileID: 2296816442785480120, guid: f087a182495cd064eb6fc61030de81a4,
+      type: 3}
+    quantity: 2
+    weight: 0
+  isSpawnByWeightEnabled: 0
+  isSpawnActivatable: 0
+  hasDespawned: 0
+  respawnCooldownCounter: 0
+--- !u!65 &917521759892852657
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 917521759892852668}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 22.006893, y: 4.2472534, z: 24.85199}
+  m_Center: {x: -2.759325, y: 1.6236267, z: 11.925995}

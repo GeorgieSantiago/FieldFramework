@@ -1,0 +1,15 @@
+[] Use the blade component to handle the Melee triggers. Then we can add the fancy physics stuff to it after
+and maybe apply additional logic
+[] Get weapon making process documented(Melee)
+[] Get weapon making process documented(Shooter)
+[] Create new Weapons
+[] Create new Consumables
+[] Create new Supplies
+[] Get recyling working
+[] Get all resource based stuff squared away
+[] Crafting System
+[] Human Enemy AI
+[] Wolf Enemy AI
+[] Robot Enemy AI
+[] NPC
+[] Merchant
